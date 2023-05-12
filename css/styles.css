@@ -23,7 +23,8 @@ header {
   padding: 0px 60px;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 10;
+  align-items: center;
 }
 
 .logo {
@@ -73,11 +74,19 @@ header {
 .fill {
   height: 70px;
 }
+
+.header-nav-mobile {
+  display: none;
+}
+
+.hamburguer-icon {
+  display: none;
+}
 /*------------------ BANNER ------------------------*/
 .bg-container {
   background-image: url("../assets/img/banner-bg.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size:auto;
   background-position-y: 100%;
 }
 
@@ -106,6 +115,7 @@ header {
 .banner-btn-container {
   display: flex;
   gap: 20px;
+ 
 }
 
 .btn-about-us,
@@ -141,12 +151,14 @@ header {
 
 .banner-right {
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .couple-img {
   position: absolute;
   top: -38px;
-  left: 50px;
+  right: -60px;
 }
 
 /*------------------ OUR SERVICES ------------------------*/
@@ -161,9 +173,10 @@ header {
   max-width: 1000px;
   margin: 0 auto;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.topic {
+.card .topic {
   margin-bottom: 40px;
   height: 50px;
 }
@@ -205,22 +218,23 @@ header {
     rgba(255, 255, 255, 0),
     rgb(119, 119, 119)
   );
-  height: 400px;
+  
 }
 
 #our-brands .bg {
   height: 100%;
   background-image: url("/assets/img/image\ 13\ 1\ \(1\).svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size:auto;
   background-position-y: 100%;
 }
 
 .carousel {
-  padding-top: 50px;
+  padding: 50px;
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .brand {
@@ -264,7 +278,6 @@ header {
   margin-left: 5px;
   margin-bottom: 25px;
   text-align: justify;
-  
 }
 
 .check-topic-icon {
@@ -281,7 +294,9 @@ header {
 
 #contact-us {
   padding: 80px 40px;
-  padding-left: 300px;
+  padding-left: 230px;
+  display: flex;
+  justify-content: center;
 }
 
 #contact-us h2 {
@@ -289,30 +304,36 @@ header {
   font-size: 2rem;
 }
 
-#contact-us h3{
+#contact-us h3 {
   font-size: 2rem;
   margin-bottom: 30px;
+}
+
+form{
+  width: 100%;
+  max-width: 900px;
 }
 
 .white-card {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  box-shadow: 0px 3px 64px 14px rgba(0,0,0,0.1);
+  box-shadow: 0px 3px 64px 14px rgba(0, 0, 0, 0.1);
   padding: 30px;
   padding-left: 200px;
+ width: 100%;
+ 
+
 }
 
-
-
-.white-card input , .white-card textarea{
+.white-card input,
+.white-card textarea {
   background-color: #f8f2f2;
   border: none;
   padding: 15px 0px;
   padding-left: 15px;
   outline: none;
   border-radius: 4px;
-  
 }
 
 .white-card input:hover {
@@ -350,17 +371,21 @@ header {
   max-width: 350px;
   position: absolute;
   left: -200px;
-  top: 50px;
+  top: 75px;
 }
 
-.topic-container{
+.red-card-inside{
+  display: none;
+}
+
+.topic-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
   margin-bottom: 30px;
 }
 
-.social-media{
+.social-media {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -368,7 +393,7 @@ header {
   margin-bottom: 30px;
 }
 
-.social-media img:hover{
+.social-media img:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -384,7 +409,7 @@ header {
   margin: 0;
 }
 
-#mensagem{
+#mensagem {
   height: 200px;
   vertical-align: top;
 }
@@ -399,8 +424,9 @@ header {
   height: 400px;
   background-image: url("/assets/img/location-bg.svg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto;
   background-position-y: 100%;
+  
 }
 
 .location-bg {
@@ -409,15 +435,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 30px;
 }
 
 .location-bg h2 {
   font-size: 3rem;
   color: white;
+  text-align: center;
 }
 
-.location-btn{
-  width: 250px;
+.location-btn {
+  max-width: 250px;
+  width: 100%;
   height: 50px;
   box-shadow: 0px 4px 4px 0px rgb(0, 0, 0, 0.25);
   cursor: pointer;
@@ -428,34 +457,32 @@ header {
   color: white;
 }
 
-.location-bg div{
+.location-bg div {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
 }
 
-.location-btn:hover{
+.location-btn:hover {
   background-color: white;
   color: black;
 }
 
-footer{
+footer {
   background-color: rgba(22, 13, 13, 0.788);
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  
 }
-
 
 /*------- - OTHERS --------*/
 
-.whats-app-btn{
-  background-color: #1BD741;
-  border-radius:50% ;
+.whats-app-btn {
+  background-color: #1bd741;
+  border-radius: 50%;
   height: 50px;
   width: 50px;
   display: flex;
@@ -465,11 +492,263 @@ footer{
   position: fixed;
   bottom: 130px;
   right: 100px;
-  opacity: 0.8;
-}
-
-.whats-app-btn:hover{
   opacity: 1;
 }
 
+.whats-app-btn:hover {
+  background-color: #18c93b;
+}
 
+@media screen and (max-width: 1120px) {
+  .couple-img {
+    right: -60px;
+    width: 500px;
+    top: 28px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .couple-img {
+    right: 0px;
+    width: 500px;
+    top: 28px;
+    z-index: -1;
+  }
+
+  .header-nav ul {
+    display: none;
+  }
+
+  .hamburguer-icon {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    z-index: 9999;
+  }
+
+  .hamburguer-icon:hover {
+    opacity: 0.8;
+  }
+
+  .middle-line {
+    height: 3px;
+    width: 27px;
+    border-radius: 10px;
+    background-color: white;
+    display: block;
+    position: absolute;
+    top: 12px;
+    transition: 0.5s ease-out;
+  }
+
+  .middle-line-close{
+    animation: middleLine 0.5s ease-out forwards;
+  }
+
+  .top-line-close{
+    animation: topLine 0.5s ease-out forwards;
+  }
+
+  .bottom-line-close{
+    animation: bottomLine 0.5s ease-out forwards;
+  }
+
+  @keyframes bottomLine {
+    50%{transform: translateY(12px)}
+    100%{transform: translateY(12px) rotate(45deg) ;}
+  }
+
+  @keyframes topLine {
+    50%{transform: translateY(-12px)}
+    100%{transform: translateY(-12px) rotate(135deg);}
+  }
+
+  @keyframes middleLine {
+    50%{transform: translateY(0px)}
+    100%{transform: translateY(0px) rotate(46deg);}
+  }
+  .bottom-line {
+    height: 3px;
+    width: 27px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .top-line {
+    content: "";
+    height: 3px;
+    width: 27px;
+    border-radius: 10px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+  }
+
+  .header-nav-mobile-container {
+    position: relative;
+  }
+
+  .show {
+    transform: translateX(-280px);
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .header-nav-mobile {
+    position: fixed;
+    background-color: #c00812;
+    width: 280px;
+    top: 0;
+    z-index: 12;
+    right: -280px;
+    height: 100%;
+    padding: 60px;
+    display: block;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .header-nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .header-nav-mobile ul li {
+    list-style: none;
+  }
+
+  .header-nav-mobile ul li a {
+    color: white;
+  }
+
+  .header-nav-mobile ul li a:hover {
+    opacity: 0.7;
+  }
+
+  .red-card{
+   
+    display: none;
+  }
+
+  .red-card-inside{
+    background-color: #ad060f;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 20px 40px;
+  display: block;
+  border-radius: 4px;
+  }
+
+  #contact-us{
+    padding-left: 40px;
+  }
+
+  .white-card{
+    padding-left: 30px;
+    
+  }
+
+  .topic-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tool-image-right{
+    z-index: -1;
+    opacity: 0.1;
+  }
+
+  #about-us .content{
+    padding-right: 30px;
+  }
+}
+
+
+@media screen and (max-width: 638px) {
+.banner-btn-container{
+  flex-wrap: wrap;
+}
+
+  .btn-contact-us, .btn-about-us{
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #about-us .content{
+    padding-right: 0;
+  }
+
+  .cards-container{
+    gap: 30px;
+  }
+
+  .banner-title{
+    font-size: 2.5rem;
+  }
+
+  .banner{
+    padding: 40px 20px;
+  }
+
+  .banner-right{
+    width: 0px;
+    
+  }
+  
+  .couple-img{
+    top: 0px;
+    right: 0px;
+    
+  }
+
+
+  .banner-subtitle{
+    font-size: 1rem;
+  }
+
+  header{
+    padding: 20px;
+    padding-left: 10px;
+  }
+
+ .brand{
+  width: 155px;
+  height: auto;
+ }
+
+  #our-services, .carousel, #about-us{
+    padding: 40px 20px;
+  }
+
+  #our-brands h2, #about-us h2, #location h2{
+    font-size: 2rem;
+  }
+
+   #about-us h3{
+    font-size: 1.2rem;
+  }
+
+  #contact-us{
+    padding: 20px 10px;
+  }
+
+  .white-card{
+    padding: 20px 20px;
+  }
+
+  .send-btn{
+    width: 100%;
+  }
+
+  .red-card-inside{
+    padding: 15px;
+  }
+
+  .whats-app-btn{
+    right: 30px;
+  }
+}
